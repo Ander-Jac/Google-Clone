@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html {
+    font-family: "Roboto";
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    width: 97%;
+    margin: auto;
+}   
+.top-nav a {
+    text-decoration: none;
+    color: black;
+}
+.top-nav ul {
+    list-style: none;
+    font-size: .8rem;
+    padding: 0;
+    align-items: center;
+}
+.nav-right {
+    display: flex;
+}
+.nav-right li {
+    margin-left: 20px;
+}
+.nav-left {
+    display: flex;
+    
+}
+.nav-left li { 
+    margin-right: 20px;
+    font-size: .9rem;
+}
+.apps-icon {
+    width:15px;
+    transform: translate(0, 12.5%);
+}
+.sign-up-icon {
+    height: 34px;
+    border-radius: 4px;
+    filter: saturate(200%);
+}
+
+.container-1 {
+    display: flex;
+    justify-content: center;
+    height: 23vh;
+    position: relative;
+    margin: auto;
+}
+#google-logo {
+    position: absolute;
+    bottom: 0;
+}
+
+.container-2 {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#input-field {
+    padding: 3px 55px;
+    height: 35px;
+    width: 480px;
+    border-radius: 25px;
+    border: 1px solid rgba(220, 220, 220, .8);
+    font-size: 1.1rem;
+}
+.input {
+    position: relative;
+}
+#search-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 13px;
+}
+#mic-icon {
+    position: absolute;
+    top: 13px;
+    right: 21px;
+    width: 13px;
+}
+@media screen and (max-width: 440px) {
+    .top-nav {transform: scale(0);}
+    #google-logo {width: 64%}
+}
