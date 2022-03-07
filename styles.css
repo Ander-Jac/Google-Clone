@@ -182,6 +182,17 @@ footer {
     color: rgba(110,110,110);
 }
 
+.catch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    line-height: 75px;
+}
+.catch a {
+    color: blue;
+}
+
 @media screen and (max-width: 1000px) {
     .carbon {bottom: 3.7vw; background-color: rgba(235,235,235,.6);}
 }
