@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-html {
+body {
     font-family: "Roboto";
     padding: 0;
+    margin: 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -9,9 +10,9 @@ html {
 .top-nav {
     display: flex;
     justify-content: space-between;
-    height: 44px;
-    width: 97%;
-    margin: auto;
+    height: 58px;
+    margin-left: 26px;
+    margin-right: 17px;
 }   
 .top-nav a {
     text-decoration: none;
@@ -41,12 +42,10 @@ html {
     width:15px;
     transform: translate(0, 12.5%);
 }
-.sign-up-icon {
-    height: 34px;
-    border-radius: 4px;
-    filter: saturate(200%);
+.user-icon {
+    height: 45px;
+    filter:hue-rotate(10deg);
 }
-
 .container-1 {
     display: flex;
     justify-content: center;
@@ -58,11 +57,19 @@ html {
     position: absolute;
     bottom: 0;
 }
+#sig {
+    position: absolute;
+    right: 12%;
+    top: 35%;
+    transform: rotate(25deg);
+    color: rgba(233,233,233)
+}
 
 .container-2 {
     margin-top: 2%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 #input-field {
@@ -70,17 +77,22 @@ html {
     height: 35px;
     width: 480px;
     border-radius: 25px;
-    border: 1px solid rgba(220, 220, 220, .8);
+    border: 1px solid rgba(220, 220, 220, .9);
     font-size: 1.1rem;
 }
+#input-field:hover {
+    box-shadow: 0px 0px 4px 2px rgba(220, 220, 220, .9);
+}
 .input {
+    display: flex;
+    justify-content: center;
     position: relative;
 }
 #search-icon {
     position: absolute;
     top: 15px;
     left: 20px;
-    width: 13px;
+    width: 14px;
 }
 #mic-icon {
     position: absolute;
@@ -88,7 +100,97 @@ html {
     right: 21px;
     width: 13px;
 }
-@media screen and (max-width: 440px) {
-    .top-nav {transform: scale(0);}
-    #google-logo {width: 64%}
+.buttons {
+    margin-top: 40px;
+}
+.buttons a{
+    text-decoration: none;
+    color: black;
+}
+.button {
+    background-color: rgba(0, 0, 0, .02);
+    padding: 7px 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: .9rem;
+    font-weight: 5;
+    border-radius: 5px;
+}
+.button:hover {
+    border: 1px solid rgba(150,150,150,.5);
+}
+
+.container-3 {
+    height: 44.6vh;
+    position: relative;
+}
+
+footer {
+    height: 3.7vw;
+    background-color: rgba(235,235,235,.6);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-nav ul {
+    padding: 0;
+    font-size: 1.15vw;
+}
+.bottom-nav-left {
+    margin-left: 35px;
+    display: flex;
+}
+.bottom-nav-right {
+    margin-right: 35px;
+    display: flex;
+}
+.bottom-nav a {
+    text-decoration: none;
+    color: black;
+}
+.bottom-nav li {
+    list-style: none;
+    color: rgba(110,110,110);
+    white-space: nowrap;
+}
+.bottom-nav-left li {
+    margin-right: 30px;
+}
+.bottom-nav-right li {
+    margin-left: 30px;
+}
+.carbon {
+        position: fixed;
+        bottom: 0;
+        height: 3.7vw;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15vw;
+}
+#carbon {
+    color: rgba(110,110,110);
+}
+
+@media screen and (max-width: 1000px) {
+    .carbon {bottom: 3.7vw; background-color: rgba(235,235,235,.6);}
+}
+@media screen and (max-width: 660px) {
+    #google-logo {width: 41%}
+    .input {width: 90%; margin: auto;}
+    #sig {right: 9%; top: 20%}
+    .bottom-nav {flex-direction: column;justify-content: center;}
+    .bottom-nav li {font-size: 1.75vw;}
+    .carbon {padding-bottom: 3.7vw; z-index: -1; font-size:1.75vw}
+
 }
